@@ -413,6 +413,26 @@ _________________________________________________________ -->
             </div>
         </div>
 
+
+        <div class="box text-center" data-animate="fadeInUp">
+            <div class="container">
+                <div class="col-md-12">
+                    <form action="/make-payment" method="POST">
+                        {{ csrf_field() }}
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="{{ config('services.stripe.key') }}"
+                        data-amount="1000"
+                        data-name="Demo Book"
+                        data-description="This is good start up book."
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto">
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container">
 
             <div class="col-md-12" data-animate="fadeInUp">

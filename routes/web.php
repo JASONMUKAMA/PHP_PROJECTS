@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('index', function () {
+    $posts = App\Post::all();
+    return view('index', compact('posts'));
 });
 
 Auth::routes();
+Route::post('/make-payment', 'PaymentsController@pay');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/index', 'HomeController@index')->name('index');
 
 
 Route::group(['prefix' => 'admin'], function () {

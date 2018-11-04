@@ -416,14 +416,14 @@ _________________________________________________________ -->
 
                 <div class="col-sm-12">
                     {{--<a href="post/{{$pst->slug}}">--}}
-                    <div class="post">
-                        @foreach($posts as $post)
+                    {{--<div class="post">--}}
+                        {{--@foreach($posts as $post)--}}
 
-                            @include('partials.post-partial',['post' => $post])
-                        @endforeach
+                            {{--@include('partials.post-partial',['post' => $post])--}}
+                        {{--@endforeach--}}
 
-                        <div class="pagination"> {{$posts->links()}}</div>
-                    </div>
+                        {{--<div class="pagination"> {{$posts->links()}}</div>--}}
+                    {{--</div>--}}
                     {{--</a>--}}
                 </div>
 
